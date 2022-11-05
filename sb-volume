@@ -1,0 +1,20 @@
+#!/usr/bin/sh
+
+# Prints the current volume or 🔇 if muted.
+
+val=$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')
+
+if (( $val == 0 )); then
+    icon="🔇"
+elif (( $val < 33 )); then
+    icon="🔈"
+elif (( $val < 50)); then
+    icon="🔉"
+elif (( $val < 100)); then
+    icon="🔊"
+else
+    icon="🔊"
+fi
+
+padding=$(printf "%1.0d"$val)
+echo "$icon$padding%"
