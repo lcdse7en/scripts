@@ -1,4 +1,4 @@
 #!/bin/sh
 
 ip_address=$(curl --silent api.ipify.org)
-echo "🥀 $ip_address"
+echo "🔰$ip_address"
