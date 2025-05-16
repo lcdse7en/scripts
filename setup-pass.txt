@@ -16,3 +16,6 @@ pass init 2353442022@qq.com
 pass insert email/qq
 # qytvqhjpkglndici
 # 然后粘贴授权码
+
+# 拉取全部邮件
+mbsync qq
