@@ -23,6 +23,7 @@ sudoers-edit() {
 
 				%wheel ALL=(ALL:ALL) ALL
 				se7en ALL=(ALL) NOPASSWD: ALL
+				se7en ALL=(ALL) NOPASSWD: /usr/bin/tee /etc/hosts
 
 				@includedir /etc/sudoers.d
 				EOF
